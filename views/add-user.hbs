@@ -1,0 +1,21 @@
+{{!-- add breadcrumbs form bootstrap for better navigation to home and current page--}}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">add blog</li>
+    </ol>
+</nav>
+
+{{!-- here we will use a dismissing alert from bootstrap --}}
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+{{!-- now here we are creating a form on add user page --}}
+<form class="row g-3 needs-validation" method="POST" action="\adduser" novalidate>
+    {{!-- this is using the partials  --}}
+    {{> user-form}}
+</form>

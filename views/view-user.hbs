@@ -1,0 +1,50 @@
+{{!-- add breadcrumbs form bootstrap for better navigation to home and current page--}}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">view User</li>
+    </ol>
+</nav>
+
+<div class="view-user m-5">
+    {{#each rows}}
+    <div class="row mb-5">
+        <div class="col text-center">
+            <h3>{{this.first_name}} {{this.last_name}}</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">First name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">email</th>
+                        <th scope="col">Phone</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">{{this.first_name}}</th>
+                        <th>{{this.last_name}}</th>
+                        <th>{{this.email}}</th>
+                        <th>{{this.phone}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col">
+        <div class="row">
+            <h5>Comments</h5>
+        </div>
+    </div>
+    <div class="col">
+        <div class="row">{{this.comments}}</div>
+    </div>
+
+    {{/each}}
+</div>

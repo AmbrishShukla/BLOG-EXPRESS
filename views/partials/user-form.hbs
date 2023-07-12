@@ -1,0 +1,40 @@
+<div><h2>Post an article</h2></div>
+<div class="col-6">
+        <div class="form-floating mb-3 ">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Blog Name" name="first_name" value="{{this.first_name}}">
+            <label for="floatingInput">Blog Name</label>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-floating mb-3 ">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Blog Title" name="last_name" value="{{this.last_name}}">
+            <label for="floatingInput">Blog Title</label>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-floating mb-3 ">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Author Email" name="email" value="{{this.email}}">
+            <label for="floatingInput">Author email</label>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-floating mb-3 ">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Phone" name="Author Name">
+            <label for="floatingInput" value="{{this.phone}}">Author Name</label>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="form-floating mb-3 ">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="comments"
+                style="height: 200px;">{{this.comments}}</textarea>
+            <label for="floatingTextarea">Blog content</label>
+        </div>
+    </div>
+
+    <div class="col-12 d-grid">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
